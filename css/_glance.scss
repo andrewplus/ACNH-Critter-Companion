@@ -1,0 +1,95 @@
+// "Current Species" section
+#glance {
+    .heading, .description {
+        text-align: center;
+    }
+
+    .section {
+        display: flex;
+    }
+
+    .typeSection {
+        width: 50%;
+        padding: 10px;
+        background-color: $type-section-bg;
+        border-radius: 20px;
+        box-shadow: $default-box-shadow;
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .species {
+        width: 25%;
+        height: 0;
+        padding-bottom: 25%;
+        background-repeat: no-repeat;
+        background-position: center 40%;
+        background-size: 45% 45%;
+        position: relative;
+        transition: background-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+        background-color: $tile-bg;
+
+        .name {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            bottom: 0;
+            margin-left: 10%;
+        }
+    }
+
+    .species.thisMonth { // for the species that are available this month but not at the current hour
+        background-color: $tile-this-month-bg;
+    }
+
+    .species.leaving:after { // leaving soon (!) indicator
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url('../img/theme/notice.svg');
+        background-size: 16px 16px;
+    }
+
+    .species:hover {
+        background-color: $tile-hover-bg;
+        cursor: pointer;
+        box-shadow: $default-box-shadow;
+    }
+
+    .changeDate.form-control, .flatpickr-mobile {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        border-radius: 999px;
+        box-shadow: $default-box-shadow;
+        border: 0;
+        background-image: url('../img/theme/calendar.svg');
+        background-size: auto 75%;
+        background-position: center right 8px;
+        background-repeat: no-repeat;
+        padding-right: 35px;
+        cursor: pointer;
+    }
+
+    .changeDate.form-control.disabled, .flatpickr-mobile.disabled {
+        display: none;
+    }
+
+    .flatpickr-mobile { // styling the OS date selector input that flatpickr uses for mobile (safari ignores this, it seems :angery:)
+        background-image: none;
+        padding-right: 10px;
+        width: 100%;
+    }
+}

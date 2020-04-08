@@ -1,0 +1,29 @@
+// Global
+$body-font-color: #5c841c;
+$body-bold-color: #44660d;
+
+$block-bg: #fbfff8;
+$block-border: #a5c782;
+
+// Species database
+$result-bg: rgba(255,255,255,0.66);
+$result-hover-bg: white;
+$result-font-color: #4f7918;
+
+$data-section-bg: #e4f9d8;
+
+$active-bg: #9cc388;
+$active-font-color: white;
+
+$ampm-bg: #8aa95a;
+$ampm-font-color: $active-font-color;
+
+// At a glance (current species)
+$type-section-bg: $data-section-bg;
+
+$tile-bg: rgba(253,255,252,0.5);
+$tile-this-month-bg: rgba(137,181,114,0.329);
+$tile-hover-bg: white;
+
+// Mobile-specific colors
+$mobile-result-bg: #e7efe4;

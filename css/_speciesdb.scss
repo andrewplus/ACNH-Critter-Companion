@@ -1,0 +1,150 @@
+// Searchable species database
+section.block.speciesDB {
+    display: flex;
+}
+
+// left side
+#resultsPanel {
+    width: 60%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+
+    #speciesSearch {
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        border-radius: 20px;
+        box-shadow: $default-box-shadow;
+        font-size: 0.9em;
+        text-align: center;
+        transition: background-position 350ms cubic-bezier(0.25, 0.1, 0, 1.2);
+        background-image: url(../img/theme/search.svg);
+        background-repeat: no-repeat;
+        background-size: auto 60%;
+        background-position: center right 13px;
+    }
+
+    #speciesSearch.empty {
+        background-position: center center;
+    }
+
+    #speciesSearch:focus {
+        background-position: center right 13px;
+    }
+
+    .filter {
+        margin: 10px 0;
+    }
+
+    #results {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        height: 0px;
+        //background-color: #7bce591f;
+        //box-shadow: inset 0px 0px 6px -3px rgba(0, 0, 0, 0.15);
+        //padding: 0.5em;
+
+        .result {
+            background-color: $result-bg;
+            box-shadow: $default-box-shadow;
+            margin-bottom: 5px;
+            border-radius: 999px;
+            padding: 5px 14px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-right: 6px;
+            transition: 300ms ease;
+            user-select: none;
+            color: $result-font-color;
+        }
+
+        .result:hover {
+            box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.15);
+            padding-left: 4%;
+            background-color: $result-hover-bg;
+        }
+
+        .result img {
+            width: 32px;
+            height: 32px;
+            margin-right: 16px;
+        }
+    }
+}
+
+// right ride
+#dataPanel {
+    width: 40%;
+    padding: 0.5em;
+
+    section {
+        background-color: $data-section-bg;
+        border-radius: 1em;
+        box-shadow: $default-box-shadow;
+        padding: 15px;
+        margin-bottom: 5px;
+    }
+
+    .name {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .image {
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 128px;
+            height: 128px;
+        }
+    }
+
+    .months {
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 4px;
+
+            .month {
+                width: 25%;
+                text-align: center;
+                box-sizing: content-box;
+                //border-radius: 999px;
+                //margin-bottom: 3px;
+            }
+
+            .month.active {
+                background-color: $active-bg;
+                color: $active-font-color;
+            }
+        }
+    }
+
+    .hours {
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+
+            .hour,
+            .ampm {
+                width: 7.6%;
+                text-align: center;
+            }
+
+            .ampm {
+                text-align: center;
+                flex-grow: 2;
+                background-color: $ampm-bg;
+                color: $ampm-font-color;
+            }
+
+            .hour.active {
+                background-color: $active-bg;
+                color: $active-font-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+// Base page layout
+$default-box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.15);
+$default-font: "Baloo Thambi 2", sans-serif;
+
+body,
+html {
+    margin: 0;
+    min-height: 100vh;
+    /* This pattern is downloaded from www.toptal.com/designers/subtlepatterns/ */
+    background-image: url("../img/theme/leaves.png");
+}
+
+body {
+    box-sizing: border-box;
+    padding: 4.5em 0;
+    font-family: $default-font;
+    color: $body-font-color;
+}
+
+input, select {
+    font-family: $default-font;
+    outline: none;
+}
+
+b, strong {
+    color: $body-bold-color;
+}
+
+a, a:link, a:visited, a:active, a:hover {
+    color: $body-font-color;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+// blocks
+
+section.block {
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $block-bg;
+    padding: 1.5em 1em;
+    box-shadow: $default-box-shadow;
+    border: 2px dashed $block-border;
+    margin-bottom: 2em;
+}
+
+section.block.bottom {
+    margin-bottom: 0em;
+}
+
+#footer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 12px;
+}
+
+#hemisphereSwitch {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+h1.hero {
+    text-align: center;
+    margin-top: 0;
+    font-size: 3em;
+}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <!-- Primary Meta Tags -->
+        <title>ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="title" content="ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide">
+        <meta name="description" content="Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them.">
+        <link rel="icon" href="favicon.png" type="image/png">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://acnh.cc/">
+        <meta property="og:title" content="ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide">
+        <meta property="og:description" content="Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them.">
+        <meta property="og:image" content="http://acnh.cc/img/preview.jpg">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="http://acnh.cc/">
+        <meta property="twitter:title" content="ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide">
+        <meta property="twitter:description" content="Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them.">
+        <meta property="twitter:image" content="http://acnh.cc/img/preview.jpg">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2:400,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Flatpickr custom styling -->
+        <style>.flatpickr-day.selected {background: #98ce9a !important;border-color: #98ce9a !important;}.flatpickr-month{font-size: 12px;}</style>
+    </head>
+
+    <body>
+        <h1 class="hero">ACNH.CC Critter Companion</h1>
+
+        <section class="block">
+            <div id="glance">
+                <div class="heading">
+                    <h2>Current Critters (<span class="date"></span>)</h2>
+                </div>
+                <div class="description">
+                    <p><strong>Lighter</strong> tiles are available right now; <strong>darker</strong> ones are available this month but not at the current hour. <br><strong>Critters with &nbsp;<img src="img/theme/notice.svg" width="16" height="16">&nbsp;</strong> will be leaving your island next month &mdash; catch them quick!</p>
+                    <label class="switch dateSwitch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="customDate">Custom date</span><br>
+                    <input type="text" class="disabled changeDate" readonly>
+                </div>
+                <div class="section">
+                    <div class="fish typeSection">
+                    </div>
+                    <div class="bug typeSection">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block speciesDB">
+            <div id="resultsPanel">
+                <form>
+                    <input id="speciesSearch" class="empty">
+                    <div class="filter">
+                        <input type="radio" name="type" value="all" checked><label for="all">All critters</label>
+                        <input type="radio" name="type" value="fish"><label for="fish">Fish</label>
+                        <input type="radio" name="type" value="bug"><label for="bugs">Bugs</label>
+                    </div>
+                </form>
+                <div id="results"></div>
+            </div>
+
+            <div id="dataPanel">
+                <section>
+                    <div class="image"><img src="img/theme/blank.svg"></div>
+                    <h2 class="name"><span class="value">Select a species</span></h2>
+                </section>
+                <section>
+                    <div class="location"><strong>Location:</strong> <span class="value"></div>
+                </section>
+                <section>
+                    <div class="shadowSize"><strong>Shadow size:</strong> <span class="value"></div>
+                </section>
+                <section>
+                    <div class="price"><strong>Price:</strong> <span class="value"></div>
+                </section>
+                <section>
+                    <div class="months">
+                        <strong>Months:</strong>
+                        <div class="list">
+                            <div class="month" data-month="0">jan</div>
+                            <div class="month" data-month="1">feb</div>
+                            <div class="month" data-month="2">mar</div>
+                            <div class="month" data-month="3">apr</div>
+                            <div class="month" data-month="4">may</div>
+                            <div class="month" data-month="5">jun</div>
+                            <div class="month" data-month="6">jul</div>
+                            <div class="month" data-month="7">aug</div>
+                            <div class="month" data-month="8">sep</div>
+                            <div class="month" data-month="9">oct</div>
+                            <div class="month" data-month="10">nov</div>
+                            <div class="month" data-month="11">dec</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="hours">
+                        <strong>Hours:</strong>
+                        <div class="list">
+                            <div class="ampm">AM</div>
+                            <div class="hour" data-hour="0">12</div>
+                            <div class="hour" data-hour="1">1</div>
+                            <div class="hour" data-hour="2">2</div>
+                            <div class="hour" data-hour="3">3</div>
+                            <div class="hour" data-hour="4">4</div>
+                            <div class="hour" data-hour="5">5</div>
+                            <div class="hour" data-hour="6">6</div>
+                            <div class="hour" data-hour="7">7</div>
+                            <div class="hour" data-hour="8">8</div>
+                            <div class="hour" data-hour="9">9</div>
+                            <div class="hour" data-hour="10">10</div>
+                            <div class="hour" data-hour="11">11</div>
+                            <div class="ampm pm">PM</div>
+                            <div class="hour pm" data-hour="12">12</div>
+                            <div class="hour pm" data-hour="13">1</div>
+                            <div class="hour pm" data-hour="14">2</div>
+                            <div class="hour pm" data-hour="15">3</div>
+                            <div class="hour pm" data-hour="16">4</div>
+                            <div class="hour pm" data-hour="17">5</div>
+                            <div class="hour pm" data-hour="18">6</div>
+                            <div class="hour pm" data-hour="19">7</div>
+                            <div class="hour pm" data-hour="20">8</div>
+                            <div class="hour pm" data-hour="21">9</div>
+                            <div class="hour pm" data-hour="22">10</div>
+                            <div class="hour pm" data-hour="23">11</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <div id="footer">
+            <span class="line">&copy;2020 acnh.cc &mdash; Data originally adapted from the research of <a href="//animalcrossing.fandom.com" target="_blank">Animal Crossing Wiki</a> contributors, available under <a href="//creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA</a>.</span><br>
+            <span class="line">This is a fan site. Animal Crossing and all screenshots/game graphics are intellectual property of Nintendo.</span><br>
+            <span class="line"><a href="https://forms.gle/Lswys5rkAxXYfJGh7" target="_blank">Submit feedback</a> &mdash; <span id="hemisphereSwitch"></span></span>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> <!-- TODO: Should probably move this off the CDN at some point -->
+        <script src="js/species-json.js"></script> <!-- json loaded directly into a variable because I'm lazy :) -->
+        <script src="js/smoothscroll.js"></script> <!-- smooth scroll polyfill for safari, IE, old edge-->
+        <script src="js/init.js"></script>
+        <script src="js/species-db.js"></script>
+        <script src="js/at-a-glance.js"></script>
+    </body>
+</html>
