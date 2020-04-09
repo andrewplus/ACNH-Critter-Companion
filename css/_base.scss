@@ -12,21 +12,27 @@ html {
 
 body {
     box-sizing: border-box;
-    padding: 4.5em 0;
+    padding: 3em 0;
     font-family: $default-font;
     color: $body-font-color;
 }
 
-input, select {
+input,
+select {
     font-family: $default-font;
     outline: none;
 }
 
-b, strong {
+b,
+strong {
     color: $body-bold-color;
 }
 
-a, a:link, a:visited, a:active, a:hover {
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
     color: $body-font-color;
 }
 
@@ -75,4 +81,17 @@ h1.hero {
     text-align: center;
     margin-top: 0;
     font-size: 3em;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.heading {
+    text-align: center;
+    h2 {
+        margin: 0.5em;
+        box-shadow: inset 0px -13px 0px 0px rgba(178, 222, 120, 0.32);
+        display: inline-block;
+        padding: 0 0.4em;
+        line-height: 1.2;
+    }
 }

@@ -1,0 +1,26 @@
+{
+  "short_name": "ACNH.CC",
+  "name": "ACNH Critter Companion",
+  "lang": "en",
+  "description": "Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them.",
+  "start_url": "/",
+  "background_color": "#a6d28c",
+  "theme_color": "#a6d28c",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/webapp/manifest-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "img/webapp/manifest-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

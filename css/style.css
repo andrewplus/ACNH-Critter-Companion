@@ -61,18 +61,24 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 4.5em 0;
+  padding: 3em 0;
   font-family: "Baloo Thambi 2", sans-serif;
   color: #5c841c; }
 
-input, select {
+input,
+select {
   font-family: "Baloo Thambi 2", sans-serif;
   outline: none; }
 
-b, strong {
+b,
+strong {
   color: #44660d; }
 
-a, a:link, a:visited, a:active, a:hover {
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
   color: #5c841c; }
 
 * {
@@ -111,9 +117,20 @@ section.block.bottom {
 h1.hero {
   text-align: center;
   margin-top: 0;
-  font-size: 3em; }
+  font-size: 3em;
+  margin-left: 10px;
+  margin-right: 10px; }
 
-#glance .heading, #glance .description {
+.heading {
+  text-align: center; }
+  .heading h2 {
+    margin: 0.5em;
+    box-shadow: inset 0px -13px 0px 0px rgba(178, 222, 120, 0.32);
+    display: inline-block;
+    padding: 0 0.4em;
+    line-height: 1.2; }
+
+#glance .description {
   text-align: center; }
 #glance .section {
   display: flex; }
@@ -150,7 +167,7 @@ h1.hero {
     bottom: 0;
     margin-left: 10%; }
 #glance .species.thisMonth {
-  background-color: #89b57254; }
+  background-color: rgba(137, 181, 114, 0.329); }
 #glance .species.leaving:after {
   content: '';
   position: absolute;
@@ -184,11 +201,8 @@ h1.hero {
   background-image: none;
   padding-right: 10px;
   width: 100%; }
-#glance .flatpickr-day.selected {
-  background: #90bd85 !important;
-  border-color: #90bd85 !important; }
 
-section.block.speciesDB {
+.speciesDB {
   display: flex; }
 
 #resultsPanel {
@@ -300,13 +314,14 @@ section.block.speciesDB {
     padding: 2em 0; }
 
   section.block, #footer {
-    width: 95%; } }
+    width: 98%;
+    padding: 1em 0.5em; } }
 @media screen and (max-width: 800px) {
   #glance .heading h2 {
     margin: 0; }
   #glance .species {
-    width: 33%;
-    padding-bottom: 33%; }
+    width: 33.3%;
+    padding-bottom: 33.3%; }
 
   .typeSection {
     margin: 2px !important;
@@ -314,16 +329,22 @@ section.block.speciesDB {
     border-radius: 0 !important;
     margin-top: 10px !important; }
 
-  section.block.speciesDB {
-    flex-wrap: wrap-reverse;
-    padding: 0; }
+  .speciesDB {
+    flex-wrap: wrap-reverse; }
+
+  .DBwrapper {
+    padding: 0 !important;
+    margin-bottom: 10px !important; }
+    .DBwrapper .heading {
+      margin: 10px; }
 
   #resultsPanel, #dataPanel {
     width: 100%; }
 
   #dataPanel {
     padding: 1.5em 1em;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    padding-top: 0; }
 
   #resultsPanel {
     padding: 0 1em;
@@ -335,7 +356,8 @@ section.block.speciesDB {
     height: 300px !important; } }
 @media screen and (max-width: 600px) {
   body {
-    padding-top: 10px; }
+    padding-top: 10px;
+    padding-bottom: 10px; }
 
   .hero {
     font-size: 2.2em !important;

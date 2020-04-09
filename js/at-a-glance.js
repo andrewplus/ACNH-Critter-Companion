@@ -18,7 +18,7 @@ let calendar = flatpickr(".changeDate", {
 /////// functions
 // 0->jan, 2->feb, you get the picture
 const monthToName = (month, compact) => {
-    const months = compact ? ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"] : ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const months = compact ? ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] : ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return months[month];
 }
 
@@ -61,7 +61,7 @@ const tileHTML = (speciesName, speciesImage, leaving, status) => {
 // update the time displayed next to the "Current Critters" heading
 const updateDisplayTime = () => {
     const ampm = (currentDate.getHours() >= 12) ? "PM" : "AM";
-    document.querySelector(".date").textContent = `${monthToName(currentDate.getMonth(), false)} ${currentDate.getDate()}, ${(currentDate.getHours() % 12) || 12}:00 ${ampm}`
+    document.querySelector(".date").textContent = `${monthToName(currentDate.getMonth(), true)}, ${(currentDate.getHours() % 12) || 12}${ampm}`
 }
 
 /////// Data processing and display
