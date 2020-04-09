@@ -6,3 +6,6 @@ This website is completely static and does not make any AJAX calls, so it can ei
 
 # Contributing
 This is mostly a personal project, but any fixes or contributions are appreciated. Please create an issue or use the feedback link in the footer to contact me before making a pull request. If you're looking to correct a data inaccuracy, first of all, thank you! Second of all, please keep in mind that values in the ``hours`` and ``months`` arrays use "programmer counting" and the 24-hour clock (months are 0-11, hours are 0-23).
+
+# License
+This project in licensed under the MIT license, with the exception of species.json, which is licensed under CC-BY-SA. [Click here for more info.](https://github.com/andrewplus/ACNH-Species-JSON)
