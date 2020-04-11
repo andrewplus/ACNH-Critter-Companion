@@ -160,6 +160,7 @@ document.querySelector(".dateSwitch input").addEventListener("input", (event) =>
 // auto refresh
 window.setInterval(() => {
     if (!timeTravel) {
+        currentDate = new Date();
         if (currentHour !== currentDate.getHours()) {
             showGlance();
             currentHour = currentDate.getHours();
