@@ -1,6 +1,7 @@
 /////// General functions, init stuff
 
 /////// global variables
+const version = 3;
 let southernHemisphere = false; // default hemisphere
 const activeClass = "active";
 
@@ -76,3 +77,6 @@ hemisphereToggle.addEventListener("click", (event) => {
         location.reload();
     }
 });
+
+// last visit version visited key update
+localStorage.setItem("lastVisitVersion", version)

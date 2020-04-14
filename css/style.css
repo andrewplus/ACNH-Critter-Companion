@@ -271,7 +271,7 @@ h1.hero {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 128px;
+    width: auto;
     height: 128px; }
   #dataPanel .months .list {
     display: flex;

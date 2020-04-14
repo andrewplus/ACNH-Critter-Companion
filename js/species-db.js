@@ -62,7 +62,7 @@ const resultClicked = speciesName => {
 
     // append data to right column
     document.querySelector("#dataPanel .name .value").textContent = speciesName;
-    document.querySelector("#dataPanel .image img").src = `img/icons/species/128/${speciesData[speciesName]["image"]}`;
+    document.querySelector("#dataPanel .image img").src = `img/renders/${speciesData[speciesName]["image"]}`;
     document.querySelector("#dataPanel .location .value").textContent = speciesData[speciesName]["location"];
     if (speciesData[speciesName]["shadowSize"] === undefined) { // display shadow size as "N/A" for bugs
         document.querySelector("#dataPanel .shadowSize .value").textContent = "N/A";
