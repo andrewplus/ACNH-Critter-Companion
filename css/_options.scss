@@ -1,0 +1,103 @@
+#darken {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    z-index: 99;
+    display: none;
+    transition: opacity 300ms ease;
+}
+
+#optionsButton {
+    width: 40px;
+    height: 40px;
+    background-color: #8aa95a;
+    border: 2px solid white;
+    border-radius: 9999px;
+    box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.95);
+    background-image: url('../img/theme/cog.svg');
+    background-size: 70% 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 2vh;
+    left: 76%;
+    transition: background-color 133ms ease, transform 133ms ease, bottom 300ms ease, left 300ms ease, opacity 300ms ease;
+    z-index: 999;
+}
+
+#options {
+    width: 40%;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    bottom: -50vh;
+    height: 50vh;
+    left: calc(50% - 20%);
+    overflow: auto;
+    transition: bottom 300ms ease;
+    border: 2px dashed #a5c782;
+    background-color: #fbfff8;
+    border-bottom-width: 0;
+    display: none;
+    padding: 1vw;
+
+    .option {
+        margin: 10px;
+    }
+}
+
+body.optionsOpen {
+    #darken {
+        display: block;
+        opacity: 0.5;
+    }
+
+    #optionsButton {
+        background-image: url('../img/theme/close.svg');
+        background-size: 30% 30%;
+        bottom: calc(50vh - 50px);
+        left: 71%;
+    }
+
+    #options.open {
+        bottom: 0;
+    }
+}
+
+#optionsButton:hover {
+    background-color: #9fbe70;
+    cursor: pointer;
+    //transform: translateY(-3px);
+}
+
+
+
+
+
+// speech bubble
+
+.speechBubble {
+	position: relative;
+	background: #55546b;
+    border-radius: .4em;
+    box-shadow: $default-box-shadow;
+}
+
+.speechBubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-left-color: #55546b;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -4px;
+	margin-right: -8px;
+}

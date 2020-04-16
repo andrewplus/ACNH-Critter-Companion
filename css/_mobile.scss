@@ -3,17 +3,29 @@
     section.block {
         width: 60%;
     }
+
+    #optionsButton {
+        left: 81%;
+    }
 }
 
 @media screen and (max-width: 1440px) {
     section.block {
         width: 70%;
     }
+
+    #optionsButton {
+        left: 86%;
+    }
 }
 
 @media screen and (max-width: 1280px) {
     section.block {
         width: 80%;
+    }
+
+    #optionsButton {
+        left: 91.5%;
     }
 }
 
@@ -25,6 +37,20 @@
     section.block, #footer {
         width: 98%;
         padding: 1em 0.5em;
+    }
+
+    #options {
+        width: 98%;
+        left: 1%;
+    }
+
+    body.optionsOpen #optionsButton {
+        left: 91.5%;
+        bottom: calc(50vh + 25px);
+    }
+
+    #optionsButton.scrolledToBottom {
+        bottom: -50px;
     }
 }
 
@@ -81,6 +107,11 @@
 
     #results {
         height: 300px !important;
+    }
+
+    #optionsButton {
+        left: initial !important;
+        right: 4% !important;
     }
 }
 

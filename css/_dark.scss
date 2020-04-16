@@ -1,0 +1,64 @@
+body.dark {
+    background-image: url('../img/theme/night.png');
+    background-size: 280px 280px;
+    color: #c0c0d0;
+
+    a,
+    a:link,
+    a:visited,
+    a:active,
+    a:hover {
+        color: #c0c0d0;
+    }
+
+    b, strong {
+        color: white;
+    }
+
+    section.block, #options {
+        background-color: #31364e;
+        border-color: #908f9e;
+    }
+
+    .heading h2 {
+        box-shadow: inset 0px -13px 0px 0px rgba(135, 137, 160, 0.32);
+    }
+
+    #glance .typeSection, #dataPanel section {
+        background-color: #5d6077;
+    }
+
+    #glance .species { background-color: rgba(145, 145, 165, 0.5); }
+    #glance .species.thisMonth { background-color: rgba(48, 49, 72, 0.329); }
+    #glance .species:hover { background-color: rgba(145, 145, 165, 0.74); }
+    #glance .species.leaving:after { background-image: url('../img/theme/notice-dark.svg'); }
+    .inline-notice { background-image: url('../img/theme/notice-dark-inline.svg'); }
+
+    .slider { background-color: #5b5c73; }
+    input:checked + .slider {
+        background-color: #b0abdc;
+    }
+
+    .month.active, .hour.active { background-color: #4b4b61 !important; }
+    .ampm { background-color: #3c3854 !important; }
+
+    #speciesSearch { background-color: #d5d5de; background-image: url('../img/theme/search-dark.svg') !important; }
+
+    #resultsPanel #results .result { background-color: rgba(255, 255, 255, 0.42); color: #2b2c33; }
+    #resultsPanel #results .result:hover { background-color: rgba(255, 255, 255, 0.658); }
+    [src='img/theme/blank.svg'] { filter: hue-rotate(110deg) brightness(0.4); }
+
+    #optionsButton {
+        background-color: #3c3854;
+    }
+
+    #optionsButton:hover {
+        background-color: #585377;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body.dark #resultsPanel {
+        background-color: #2a2c42;
+    }
+}

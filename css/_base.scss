@@ -17,6 +17,10 @@ body {
     color: $body-font-color;
 }
 
+body.transitionAll * {
+    transition: background-color 150ms linear;
+}
+
 input,
 select {
     font-family: $default-font;

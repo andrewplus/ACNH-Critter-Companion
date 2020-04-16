@@ -5,21 +5,21 @@
         <title>ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="title" content="ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide">
+        <meta name="title" content="ACNH Critter Companion - Animal Crossing: New Horizons Critter Guide">
         <meta name="description" content="Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them.">
         <link rel="icon" href="favicon.png" type="image/png">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://acnh.cc/">
-        <meta property="og:title" content="ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide">
+        <meta property="og:title" content="ACNH Critter Companion - Animal Crossing: New Horizons Critter Guide">
         <meta property="og:description" content="Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them.">
         <meta property="og:image" content="https://acnh.cc/img/preview.jpg">
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="http://acnh.cc/">
-        <meta property="twitter:title" content="ACNH.CC Critter Companion - Animal Crossing: New Horizons Critter Guide">
+        <meta property="twitter:title" content="ACNH Critter Companion - Animal Crossing: New Horizons Critter Guide">
         <meta property="twitter:description" content="Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them.">
         <meta property="twitter:image" content="https://acnh.cc/img/preview.jpg">
 
@@ -60,6 +60,7 @@
     </head>
 
     <body>
+        <script>if(localStorage.getItem("dark") === "true"){document.querySelector("body").classList.add("dark");}</script> <!-- dark mode activated before all body contents so dark mode users don't get a flicker of light -->
         <h1 class="hero">ACNH Critter Companion</h1>
 
         <section class="block">
@@ -68,7 +69,7 @@
                     <h2>Current Critters (<span class="date"></span>)</h2>
                 </div>
                 <div class="description">
-                    <p><strong>Lighter</strong> tiles are available right now; <strong>darker</strong> ones are available this month but not at the current hour. <br><strong>Critters with  <img src="img/theme/notice.svg" width="16" height="16"> </strong> will be leaving your island next month — catch them quick!</p>
+                    <p><strong>Lighter</strong> tiles are available right now; <strong>darker</strong> ones are available this month but not at the current hour. <br><strong>Critters with  <span class="inline-notice"></span> </strong> will be leaving your island next month — catch them quick!</p>
                     <label class="switch dateSwitch">
                         <input type="checkbox">
                         <span class="slider round"></span>
@@ -91,13 +92,14 @@
             </div>
             <div class="speciesDB">
                 <div id="resultsPanel">
-                    <form>
+                    <form autocomplete="off" onsubmit="return false;">
                         <input id="speciesSearch" class="empty">
                         <div class="filter">
                             <input type="radio" name="type" value="all" checked><label for="all">All critters</label>
                             <input type="radio" name="type" value="fish"><label for="fish">Fish</label>
                             <input type="radio" name="type" value="bug"><label for="bugs">Bugs</label>
                         </div>
+                        <!--<button type="submit" disabled style="display: none" aria-hidden="true"></button> <!-- needed to disable enter key-->
                     </form>
                     <div id="results"></div>
                 </div>
@@ -173,9 +175,39 @@
         </section>
 
         <div id="footer">
-            <span class="line">©2020 acnh.cc — Data originally adapted from the research of <a href="//animalcrossing.fandom.com" target="_blank">Animal Crossing Wiki</a> contributors, available under <a href="//creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA</a>.</span><br>
+            <span class="line">©2020 acnh.cc &mdash; <a href="sources.html">Data sources</a></span><br>
             <span class="line">This is a fan site. Animal Crossing and all screenshots/game graphics are intellectual property of Nintendo.</span><br>
-            <span class="line"><a href="https://forms.gle/Lswys5rkAxXYfJGh7" target="_blank">Submit feedback</a> — <span id="hemisphereSwitch"></span></span>
+            <span class="line">Created by <a href="//twitter.com/andrewdotjpg" target="_blank">@andrewdotjpg</a> | <a href="https://forms.gle/Lswys5rkAxXYfJGh7" target="_blank">Submit feedback</a></span>
+        </div>
+
+        <div id="darken"></div>
+        <div id="optionsButton">
+            <!-- Temporary new feature notification -->
+            <script>
+                if (localStorage.getItem("darkBubbleClosed") !== "true") {
+                    document.querySelector("#optionsButton").innerHTML = '<div class="speechBubble" style="color:white;width:150px;margin-left:-165px;padding:3px;text-align:center;">New dark mode!</div>';
+                    document.querySelector("#optionsButton").addEventListener("click", (event) => {
+                        document.querySelector(".speechBubble").style.display = "none";
+                        localStorage.setItem("darkBubbleClosed", "true");
+                    });
+                }
+            </script>
+        </div>
+        <div id="options">
+            <div class="heading">
+                <h2>Options</h2>
+                <div>
+                    <div class="option darkSwitch">
+                        <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                        &nbsp;Night mode
+                    </div>
+                    <div class="option hemisphereSwitch">
+                        <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                        &nbsp;Southern hemisphere
+                    </div>
+                    <p><small>More features coming soon! <a href="https://forms.gle/Lswys5rkAxXYfJGh7" target="_blank">Have one to suggest?</a></small></p>
+                </div>
+            </div>
         </div>
 
         <!-- JavaScript -->
@@ -183,6 +215,7 @@
         <script src="js/species-json.js"></script> <!-- json loaded directly into a variable because I'm lazy :) -->
         <script src="js/smoothscroll.js"></script> <!-- smooth scroll polyfill for safari, IE, old edge-->
         <script src="js/init.js"></script>
+        <script src="js/options.js"></script>
         <script src="js/species-db.js"></script>
         <script src="js/at-a-glance.js"></script>
     </body>

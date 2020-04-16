@@ -53,12 +53,16 @@ const showResults = () => {
 }
 
 /////// show the data pertaining to the search result collected by the user
-const resultClicked = speciesName => {
-    scrollToDB();
+const resultClicked = (speciesName, scrollOverride) => {
+    currentCritter = speciesName;
+    if (!scrollOverride) { scrollToDB(); }
 
     // clear the month/year sections
     massClassManipulate(".month", activeClass, "remove");
     massClassManipulate(".hour", activeClass, "remove");
+
+    // add loading class to image
+    document.querySelector("#dataPanel .image img").classList.add("loading");
 
     // append data to right column
     document.querySelector("#dataPanel .name .value").textContent = speciesName;
@@ -92,6 +96,11 @@ const resultClicked = speciesName => {
     } else {
         massClassManipulate(".hour", activeClass, "add");
     }
+
+    // image loaded
+    document.querySelector(".image img").onload = function() {
+        document.querySelector("#dataPanel .image img").classList.remove("loading");
+    };
 }
 
 /////// show unfiltered results list when the page initially loads

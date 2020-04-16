@@ -1,8 +1,9 @@
 /////// General functions, init stuff
 
 /////// global variables
-const version = 3;
+const version = 4;
 let southernHemisphere = false; // default hemisphere
+let currentCritter = "unset";
 const activeClass = "active";
 
 /////// functions
@@ -55,28 +56,5 @@ if (localStorage.getItem("southern") === "true") {
     southernHemisphere = true;
 }
 
-// insert correct text in the switch hemispheres button
-const hemisphereToggle = document.querySelector("#hemisphereSwitch");
-if (southernHemisphere) {
-    hemisphereToggle.innerHTML = "Switch to northern hemisphere";
-} else {
-    hemisphereToggle.innerHTML = "Switch to southern hemisphere";
-}
-
-// switch hemispheres click
-// TODO: repeated code; this logic could be a function
-// TODO: make it not require a location.reload()
-hemisphereToggle.addEventListener("click", (event) => {
-    if (southernHemisphere) {
-        southernHemisphere = false;
-        localStorage.setItem("southern", southernHemisphere);
-        location.reload();
-    } else {
-        southernHemisphere = true;
-        localStorage.setItem("southern", southernHemisphere);
-        location.reload();
-    }
-});
-
 // last visit version visited key update
-localStorage.setItem("lastVisitVersion", version)
+localStorage.setItem("lastVisitVersion", version);
