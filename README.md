@@ -1,5 +1,5 @@
 # ACNH Critter Companion
-Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them. http://acnh.cc
+Find out which critters are on your Animal Crossing: New Horizons island, how much you can sell them for, and where to find them. https://andrew.plus/ACNH-Critter-Companion/
 
 # Running it
 This website is completely static and does not make any AJAX calls, so it can either simply be accessed via the file:// URI or hosted on a local server. 
